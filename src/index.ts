@@ -140,7 +140,7 @@ async function main() {
     console.log(formattedResults);
 
     // 6. Sauvegarder dans un fichier JSON
-    const outputPath = path.join(process.cwd(), "src", "data", "results.json");
+    const outputPath = path.join(process.cwd(), "public", "results.json");
     const outputData = {
       timestamp: new Date().toISOString(),
       totalPlayersAnalyzed: allTop3Champions.length,

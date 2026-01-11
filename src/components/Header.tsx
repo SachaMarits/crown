@@ -1,4 +1,4 @@
-import resultsData from "../data/results.json";
+import resultsData from "../../public/results.json";
 
 /**
  * Header component - Displays the title and statistics

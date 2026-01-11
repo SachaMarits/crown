@@ -4,7 +4,7 @@ import { RoleFilter } from "./components/RoleFilter";
 import { ChampionRanking } from "./components/ChampionRanking";
 import { ChampionResult, ResultsData } from "./types";
 import { Role, championMatchesRole } from "./data/championRoles";
-import resultsData from "./data/results.json";
+import resultsData from "../public/results.json";
 
 /**
  * App component - Main application component
