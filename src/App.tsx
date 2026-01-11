@@ -2,9 +2,8 @@ import { useState, useEffect, useMemo } from "react";
 import { Header } from "./components/Header";
 import { RoleFilter } from "./components/RoleFilter";
 import { ChampionRanking } from "./components/ChampionRanking";
-import { ChampionResult, ResultsData } from "./types";
+import { ChampionResult } from "./types";
 import { Role, championMatchesRole } from "./data/championRoles";
-import resultsData from "../public/results.json";
 
 /**
  * App component - Main application component
@@ -15,13 +14,16 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    // Load data from JSON file
-    const data = resultsData as ResultsData;
-
-    // Sort champions by count in descending order
-    const sortedChampions = [...data.results].sort((a, b) => b.count - a.count);
-
-    setAllChampions(sortedChampions);
+    const fetchData = async () => {
+      const data = await fetch("results.json").then((response) =>
+        response.json()
+      );
+      const sortedChampions = [...data.results].sort(
+        (a, b) => b.count - a.count
+      );
+      setAllChampions(sortedChampions);
+    };
+    fetchData();
   }, []);
 
   // Filter champions by selected role and search query

@@ -1,13 +1,26 @@
-import resultsData from "../../public/results.json";
+import { useEffect, useState } from "react";
 
 /**
  * Header component - Displays the title and statistics
  */
 export const Header = () => {
-  const data = resultsData as {
+  const [data, setData] = useState<{
     totalPlayersAnalyzed: number;
     timestamp: string;
-  };
+  }>({
+    totalPlayersAnalyzed: 0,
+    timestamp: "",
+  });
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("results.json").then((response) =>
+        response.json()
+      );
+      setData(data);
+    };
+    fetchData();
+  }, [data]);
+
   const totalGames = data.totalPlayersAnalyzed * 20; // 20 last games per player
 
   // Format the timestamp
