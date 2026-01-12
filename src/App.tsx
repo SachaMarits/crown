@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Header } from "./components/Header";
 import { RoleFilter } from "./components/RoleFilter";
 import { ChampionRanking } from "./components/ChampionRanking";
+import { Footer } from "./components/Footer";
 import { ChampionResult } from "./types";
 import { Role, championMatchesRole } from "./data/championRoles";
 
@@ -49,7 +50,7 @@ function App() {
   }, [allChampions, selectedRole, searchQuery]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
       <RoleFilter
         selectedRole={selectedRole}
@@ -57,13 +58,14 @@ function App() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
       />
-      <main className="pb-12">
+      <main className="flex-1 pb-12">
         <ChampionRanking
           champions={filteredChampions}
           allChampions={allChampions}
           totalChampions={filteredChampions.length}
         />
       </main>
+      <Footer />
     </div>
   );
 }

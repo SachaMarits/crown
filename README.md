@@ -1,59 +1,49 @@
-# Riot Challenger Analyzer
+# Crown
 
-POC pour analyser les champions les plus joués par le top 100 des joueurs Challenger sur EUW.
+Discover which champions are most played by the top 100 Challenger players on EUW server.
 
-## Installation
+## About
 
-```bash
-npm install
-```
+Crown analyzes the champion preferences of the highest-ranked League of Legends players. By examining the last 20 ranked solo games from each of the top 100 players, we provide insights into the current meta and champion popularity at the highest level of play.
 
-## Configuration
+The data is updated daily to reflect the latest trends in the Challenger meta.
 
-1. Créez un fichier `.env` à la racine du projet
-2. Ajoutez votre clé API Riot Games :
+## Features
 
-```
-RIOT_API_KEY=votre_cle_api_ici
-```
+### Real-time Statistics
+- View statistics based on thousands of games from the top 100 Challenger players
+- See exactly how many games were analyzed and when the data was last updated
 
-Pour obtenir une clé API Riot Games : https://developer.riotgames.com/
+### Role Filtering
+Filter champions by their primary role:
+- **All** - View all champions
+- **Top** - Top lane champions
+- **Jungle** - Jungle champions
+- **Mid** - Mid lane champions
+- **ADC** - Bot lane carries
+- **Support** - Support champions
 
-## Utilisation
+### Search
+Quickly find any champion by typing their name in the search bar.
 
-### Script manuel
+### Detailed Rankings
+Each champion card displays:
+- Global ranking position
+- Champion name and title
+- Number of times played by the top 100 players
+- High-quality champion artwork
 
-```bash
-npm run backend:dev
-```
+## How It Works
 
-Le script va :
-1. Récupérer le top 100 Challenger EUW
-2. Analyser les 20 derniers matchs ranked solo de chaque joueur
-3. Déterminer les top 3 champions de chaque joueur
-4. Agrégation et tri des résultats
-5. Afficher les résultats dans la console
-6. Sauvegarder les résultats dans `src/data/results.json`
+1. **Data Collection**: We analyze the last 20 ranked solo games from each of the top 100 Challenger players on EUW
+2. **Champion Tracking**: For each player, we identify their 3 most played champions
+3. **Aggregation**: All champion data is aggregated and sorted by popularity
+4. **Daily Updates**: Statistics are automatically refreshed every day to keep the data current
 
-### Développement frontend
+## Data Source
 
-```bash
-npm run dev
-```
+All data is collected from the official Riot Games API, focusing exclusively on ranked solo games from Challenger tier players on the EUW server.
 
-### Automatisation avec GitHub Actions
+---
 
-Le projet utilise GitHub Actions pour automatiser la régénération des données quotidiennement. Le workflow s'exécute tous les jours à 00:00 UTC et met à jour automatiquement `src/data/results.json`.
-
-**Configuration requise :**
-1. Ajoutez votre clé API Riot Games dans les secrets GitHub : `Settings > Secrets and variables > Actions > New repository secret`
-   - Nom : `RIOT_API_KEY`
-   - Valeur : votre clé API Riot Games
-
-Le workflow committera et poussera automatiquement les nouvelles données.
-
-## Note
-
-- Le script inclut un throttling (150ms entre les requêtes) pour respecter les rate limits de l'API
-- La clé API de développement gratuite permet 100 requêtes toutes les 2 minutes
-- Le traitement complet peut prendre plusieurs minutes selon la limite de taux
+*Last updated: Data refreshes daily at 3:00 AM UTC*

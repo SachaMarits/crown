@@ -1,14 +1,12 @@
-name: Build & Deploy Crown
+name: Build & Deploy Frontend
 
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "0 3 * * *" # tous les jours à 3h
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -28,11 +26,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Run backend script (generate stats)
-        run: npm run backend:dev
-        env:
-          RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
 
       - name: Build frontend
         run: npm run build
