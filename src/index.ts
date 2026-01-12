@@ -14,7 +14,7 @@ import { ChallengerPlayer } from "./types";
 dotenv.config();
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY;
-const BEST_PLAYER_COUNT = 100;
+const BEST_PLAYER_COUNT = 3;
 
 if (!RIOT_API_KEY) {
   console.error("ERREUR: RIOT_API_KEY n'est pas définie dans le fichier .env");
