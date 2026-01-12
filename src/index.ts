@@ -4,7 +4,7 @@ import * as path from "path";
 import { RiotApiClient } from "./riotApi";
 import {
   countChampionsPlayed,
-  getTop3Champions,
+  getAllChampions,
   aggregateChampionCounts,
   formatResults,
 } from "./utils";
@@ -14,7 +14,7 @@ import { ChallengerPlayer } from "./types";
 dotenv.config();
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY;
-const BEST_PLAYER_COUNT = 3;
+const BEST_PLAYER_COUNT = 100;
 
 if (!RIOT_API_KEY) {
   console.error("ERREUR: RIOT_API_KEY n'est pas définie dans le fichier .env");
@@ -27,7 +27,7 @@ async function main() {
   );
 
   const apiClient = new RiotApiClient(RIOT_API_KEY as string);
-  const allTop3Champions: string[][] = [];
+  const allPlayerChampions: string[][] = [];
 
   try {
     // 1. Récupérer les leaderboards (Challenger, Grandmaster, Master)
@@ -102,13 +102,13 @@ async function main() {
           continue;
         }
 
-        // Compter les champions et obtenir le top 3
+        // Compter les champions et obtenir tous les champions joués
         const championCount = countChampionsPlayed(matches, player.puuid);
-        const top3Champions = getTop3Champions(championCount);
+        const allChampions = getAllChampions(championCount);
 
-        if (top3Champions.length > 0) {
-          allTop3Champions.push(top3Champions);
-          console.log(`  ✅ Top 3: ${top3Champions.join(", ")}`);
+        if (allChampions.length > 0) {
+          allPlayerChampions.push(allChampions);
+          console.log(`  ✅ Champions: ${allChampions.join(", ")}`);
         } else {
           console.log(`  ⚠️  Aucun champion trouvé pour le joueur ${playerId}`);
         }
@@ -128,12 +128,12 @@ async function main() {
     }
 
     console.log(
-      `\n✅ Traitement terminé: ${allTop3Champions.length} joueurs avec des données valides\n`
+      `\n✅ Traitement terminé: ${allPlayerChampions.length} joueurs avec des données valides\n`
     );
 
     // 4. Agrégation des résultats
     console.log("📈 Agrégation des résultats...");
-    const aggregatedStats = aggregateChampionCounts(allTop3Champions);
+    const aggregatedStats = aggregateChampionCounts(allPlayerChampions);
 
     // 5. Affichage des résultats
     const formattedResults = formatResults(aggregatedStats);
@@ -143,7 +143,7 @@ async function main() {
     const outputPath = path.join(process.cwd(), "public", "results.json");
     const outputData = {
       timestamp: new Date().toISOString(),
-      totalPlayersAnalyzed: allTop3Champions.length,
+      totalPlayersAnalyzed: allPlayerChampions.length,
       results: aggregatedStats,
     };
 

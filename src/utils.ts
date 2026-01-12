@@ -44,15 +44,20 @@ export function getTop3Champions(championCount: Map<string, number>): string[] {
   return sorted;
 }
 
+// Obtenir tous les champions joués par un joueur
+export function getAllChampions(championCount: Map<string, number>): string[] {
+  return Array.from(championCount.keys());
+}
+
 // Agrégation des résultats de tous les joueurs
 export function aggregateChampionCounts(
-  allTop3Champions: string[][]
+  allPlayerChampions: string[][]
 ): ChampionStats[] {
   const countMap = new Map<string, number>();
 
-  // Compter combien de fois chaque champion apparaît dans les top 3
-  for (const top3 of allTop3Champions) {
-    for (const champion of top3) {
+  // Compter combien de fois chaque champion apparaît dans les parties des joueurs
+  for (const champions of allPlayerChampions) {
+    for (const champion of champions) {
       const currentCount = countMap.get(champion) || 0;
       countMap.set(champion, currentCount + 1);
     }
@@ -76,9 +81,7 @@ export function formatResults(stats: ChampionStats[]): string {
     "\n=== RÉSULTATS: TOP CHAMPIONS DES MEILLEURS JOUEURS EUW ===\n\n";
 
   stats.forEach((stat, index) => {
-    output += `${index + 1}. ${stat.championName}: ${
-      stat.count
-    } apparitions dans les top 3\n`;
+    output += `${index + 1}. ${stat.championName}: ${stat.count} apparitions\n`;
   });
 
   output += "\n=== FIN DES RÉSULTATS ===\n";
