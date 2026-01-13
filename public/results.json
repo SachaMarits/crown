@@ -1,45 +1,740 @@
 {
-  "timestamp": "2026-01-12T21:36:33.734Z",
-  "totalPlayersAnalyzed": 3,
+  "timestamp": "2026-01-13T04:16:45.318Z",
+  "totalPlayersAnalyzed": 100,
   "results": [
     {
       "championId": 0,
+      "championName": "Lucian",
+      "count": 16
+    },
+    {
+      "championId": 0,
       "championName": "Corki",
-      "count": 2
+      "count": 15
     },
     {
       "championId": 0,
-      "championName": "DrMundo",
-      "count": 1
+      "championName": "Syndra",
+      "count": 14
     },
     {
       "championId": 0,
-      "championName": "Ambessa",
-      "count": 1
+      "championName": "Jhin",
+      "count": 14
     },
     {
       "championId": 0,
-      "championName": "JarvanIV",
-      "count": 1
+      "championName": "Sylas",
+      "count": 13
     },
     {
       "championId": 0,
-      "championName": "Cassiopeia",
-      "count": 1
+      "championName": "Ezreal",
+      "count": 13
+    },
+    {
+      "championId": 0,
+      "championName": "Sion",
+      "count": 12
+    },
+    {
+      "championId": 0,
+      "championName": "Nami",
+      "count": 11
     },
     {
       "championId": 0,
       "championName": "Ryze",
-      "count": 1
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Akali",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Aphelios",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Orianna",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Diana",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Smolder",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Karma",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Malphite",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Sivir",
+      "count": 10
+    },
+    {
+      "championId": 0,
+      "championName": "Viktor",
+      "count": 10
+    },
+    {
+      "championId": 0,
+      "championName": "Caitlyn",
+      "count": 10
+    },
+    {
+      "championId": 0,
+      "championName": "Kaisa",
+      "count": 10
+    },
+    {
+      "championId": 0,
+      "championName": "Nautilus",
+      "count": 9
+    },
+    {
+      "championId": 0,
+      "championName": "Vayne",
+      "count": 9
+    },
+    {
+      "championId": 0,
+      "championName": "Galio",
+      "count": 9
+    },
+    {
+      "championId": 0,
+      "championName": "Lulu",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Janna",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Naafiri",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Zed",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Braum",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Jinx",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Tristana",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Cassiopeia",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Jayce",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Qiyana",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Alistar",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Swain",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "TwistedFate",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Yasuo",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Mel",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Ashe",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "DrMundo",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "JarvanIV",
+      "count": 6
     },
     {
       "championId": 0,
       "championName": "Draven",
-      "count": 1
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Taliyah",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Bard",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Leona",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Leblanc",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Varus",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Yunara",
+      "count": 6
+    },
+    {
+      "championId": 0,
+      "championName": "Belveth",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Ekko",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Zoe",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Irelia",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Pantheon",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Khazix",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Elise",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Renekton",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Yone",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Ambessa",
+      "count": 4
     },
     {
       "championId": 0,
       "championName": "Zeri",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Ahri",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Kassadin",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Rakan",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Vex",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Xayah",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "MissFortune",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Aurora",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Hecarim",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Milio",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Nilah",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Jax",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Rell",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Gnar",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Karthus",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "LeeSin",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Pyke",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Soraka",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Twitch",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "FiddleSticks",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Brand",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Nidalee",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Viego",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "MonkeyKing",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Senna",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Sona",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Xerath",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Kalista",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Lux",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Vladimir",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Anivia",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Udyr",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Aatrox",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Nunu",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Zilean",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Thresh",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Morgana",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Seraphine",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Neeko",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Singed",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "MasterYi",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Kayle",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Taric",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "RekSai",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "XinZhao",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Olaf",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Talon",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Lissandra",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Gragas",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Akshan",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Rengar",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Chogath",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Ivern",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Hwei",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Katarina",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "KSante",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Sejuani",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "KogMaw",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Azir",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Poppy",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "AurelionSol",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Rumble",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Ornn",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Volibear",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Nasus",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Tryndamere",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Gwen",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Briar",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Renata",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Blitzcrank",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Amumu",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Kennen",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Veigar",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Lillia",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Samira",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Ziggs",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Darius",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Fiora",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Teemo",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Zyra",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Kayn",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Nocturne",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Fizz",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Zaahen",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Velkoz",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Mordekaiser",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Maokai",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Zac",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Shen",
       "count": 1
     }
   ]
