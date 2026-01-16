@@ -1,10 +1,54 @@
 import { Match, Participant, ChampionStats } from "./types";
 
-// Extraire les champions joués par un joueur dans un match
-export function getChampionFromMatch(
+export type Role = "top" | "jungle" | "mid" | "adc" | "support";
+
+// Mapper les champs de position de l'API Riot vers un rôle simple
+export function mapPositionToRole(participant: Participant): Role {
+  // Priorité: individualPosition > teamPosition > lane+role
+  const position =
+    participant.individualPosition ||
+    participant.teamPosition ||
+    participant.lane;
+
+  if (position) {
+    const posUpper = position.toUpperCase();
+    if (posUpper.includes("TOP")) return "top";
+    if (posUpper.includes("JUNGLE")) return "jungle";
+    if (posUpper.includes("MIDDLE") || posUpper.includes("MID")) return "mid";
+    if (posUpper.includes("BOTTOM") || posUpper.includes("BOT")) {
+      // Si c'est BOTTOM, on doit vérifier le rôle pour distinguer ADC et support
+      const role = participant.role?.toUpperCase() || "";
+      if (role.includes("SUPPORT") || role.includes("UTILITY")) {
+        return "support";
+      }
+      return "adc";
+    }
+    if (posUpper.includes("UTILITY")) return "support";
+  }
+
+  // Fallback: utiliser lane + role si position n'est pas disponible
+  const lane = participant.lane?.toUpperCase() || "";
+  const role = participant.role?.toUpperCase() || "";
+
+  if (lane.includes("TOP")) return "top";
+  if (lane.includes("JUNGLE")) return "jungle";
+  if (lane.includes("MID")) return "mid";
+  if (lane.includes("BOT")) {
+    if (role.includes("SUPPORT") || role.includes("UTILITY")) {
+      return "support";
+    }
+    return "adc";
+  }
+
+  // Par défaut, retourner mid si on ne peut pas déterminer
+  return "mid";
+}
+
+// Extraire le champion et le rôle joués par un joueur dans un match
+export function getChampionAndRoleFromMatch(
   match: Match,
   puuid: string
-): string | null {
+): { champion: string; role: Role } | null {
   const participant = match.info.participants.find(
     (p: Participant) => p.puuid === puuid && match.info.queueId === 420
   );
@@ -13,25 +57,31 @@ export function getChampionFromMatch(
     return null;
   }
 
-  return participant.championName;
+  const role = mapPositionToRole(participant);
+  return {
+    champion: participant.championName,
+    role,
+  };
 }
 
-// Compter les champions joués par un joueur dans une liste de matchs
+// Compter les champions joués par un joueur dans une liste de matchs (avec rôle)
+// La clé est au format "champion|rôle" (ex: "Sylas|mid", "Sylas|jungle")
 export function countChampionsPlayed(
   matches: Match[],
   puuid: string
 ): Map<string, number> {
-  const championCount = new Map<string, number>();
+  const championRoleCount = new Map<string, number>();
 
   for (const match of matches) {
-    const champion = getChampionFromMatch(match, puuid);
-    if (champion) {
-      const currentCount = championCount.get(champion) || 0;
-      championCount.set(champion, currentCount + 1);
+    const result = getChampionAndRoleFromMatch(match, puuid);
+    if (result) {
+      const key = `${result.champion}|${result.role}`;
+      const currentCount = championRoleCount.get(key) || 0;
+      championRoleCount.set(key, currentCount + 1);
     }
   }
 
-  return championCount;
+  return championRoleCount;
 }
 
 // Obtenir les top 3 champions d'un joueur
@@ -44,32 +94,32 @@ export function getTop3Champions(championCount: Map<string, number>): string[] {
   return sorted;
 }
 
-// Obtenir tous les champions joués par un joueur
-export function getAllChampions(championCount: Map<string, number>): string[] {
-  return Array.from(championCount.keys());
-}
-
 // Agrégation des résultats de tous les joueurs
+// Les clés sont au format "champion|rôle" (ex: "Sylas|mid", "Sylas|jungle")
 export function aggregateChampionCounts(
-  allPlayerChampions: string[][]
+  allPlayerChampionCounts: Map<string, number>[]
 ): ChampionStats[] {
   const countMap = new Map<string, number>();
 
-  // Compter combien de fois chaque champion apparaît dans les parties des joueurs
-  for (const champions of allPlayerChampions) {
-    for (const champion of champions) {
-      const currentCount = countMap.get(champion) || 0;
-      countMap.set(champion, currentCount + 1);
+  // Agréger tous les comptes de champions+rôles de tous les joueurs
+  for (const playerChampionCount of allPlayerChampionCounts) {
+    for (const [championRoleKey, count] of playerChampionCount.entries()) {
+      const currentCount = countMap.get(championRoleKey) || 0;
+      countMap.set(championRoleKey, currentCount + count);
     }
   }
 
-  // Convertir en tableau et trier
+  // Convertir en tableau, parser les clés "champion|rôle", et trier
   const stats: ChampionStats[] = Array.from(countMap.entries())
-    .map(([championName, count]) => ({
-      championId: 0, // On n'a pas l'ID ici, on peut l'ignorer pour cette POC
-      championName,
-      count,
-    }))
+    .map(([championRoleKey, count]) => {
+      const [championName, role] = championRoleKey.split("|");
+      return {
+        championId: 0, // On n'a pas l'ID ici, on peut l'ignorer pour cette POC
+        championName,
+        role: role as Role,
+        count,
+      };
+    })
     .sort((a, b) => b.count - a.count);
 
   return stats;
@@ -81,7 +131,10 @@ export function formatResults(stats: ChampionStats[]): string {
     "\n=== RÉSULTATS: TOP CHAMPIONS DES MEILLEURS JOUEURS EUW ===\n\n";
 
   stats.forEach((stat, index) => {
-    output += `${index + 1}. ${stat.championName}: ${stat.count} apparitions\n`;
+    const roleDisplay = stat.role ? ` (${stat.role})` : "";
+    output += `${index + 1}. ${stat.championName}${roleDisplay}: ${
+      stat.count
+    } parties\n`;
   });
 
   output += "\n=== FIN DES RÉSULTATS ===\n";

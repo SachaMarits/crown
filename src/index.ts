@@ -4,7 +4,6 @@ import * as path from "path";
 import { RiotApiClient } from "./riotApi";
 import {
   countChampionsPlayed,
-  getAllChampions,
   aggregateChampionCounts,
   formatResults,
 } from "./utils";
@@ -27,7 +26,7 @@ async function main() {
   );
 
   const apiClient = new RiotApiClient(RIOT_API_KEY as string);
-  const allPlayerChampions: string[][] = [];
+  const allPlayerChampionCounts: Map<string, number>[] = [];
 
   try {
     // 1. Récupérer les leaderboards (Challenger, Grandmaster, Master)
@@ -102,13 +101,18 @@ async function main() {
           continue;
         }
 
-        // Compter les champions et obtenir tous les champions joués
+        // Compter les champions joués
         const championCount = countChampionsPlayed(matches, player.puuid);
-        const allChampions = getAllChampions(championCount);
 
-        if (allChampions.length > 0) {
-          allPlayerChampions.push(allChampions);
-          console.log(`  ✅ Champions: ${allChampions.join(", ")}`);
+        if (championCount.size > 0) {
+          allPlayerChampionCounts.push(championCount);
+          const championList = Array.from(championCount.entries())
+            .map(([key, count]) => {
+              const [name, role] = key.split("|");
+              return `${name} ${role} (${count}x)`;
+            })
+            .join(", ");
+          console.log(`  ✅ Champions: ${championList}`);
         } else {
           console.log(`  ⚠️  Aucun champion trouvé pour le joueur ${playerId}`);
         }
@@ -128,12 +132,12 @@ async function main() {
     }
 
     console.log(
-      `\n✅ Traitement terminé: ${allPlayerChampions.length} joueurs avec des données valides\n`
+      `\n✅ Traitement terminé: ${allPlayerChampionCounts.length} joueurs avec des données valides\n`
     );
 
     // 4. Agrégation des résultats
     console.log("📈 Agrégation des résultats...");
-    const aggregatedStats = aggregateChampionCounts(allPlayerChampions);
+    const aggregatedStats = aggregateChampionCounts(allPlayerChampionCounts);
 
     // 5. Affichage des résultats
     const formattedResults = formatResults(aggregatedStats);
@@ -143,7 +147,7 @@ async function main() {
     const outputPath = path.join(process.cwd(), "public", "results.json");
     const outputData = {
       timestamp: new Date().toISOString(),
-      totalPlayersAnalyzed: allPlayerChampions.length,
+      totalPlayersAnalyzed: allPlayerChampionCounts.length,
       results: aggregatedStats,
     };
 

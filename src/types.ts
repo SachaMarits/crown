@@ -2,6 +2,7 @@
 export interface ChampionResult {
   championId: number;
   championName: string;
+  role?: string; // top, jungle, mid, adc, support
   count: number;
 }
 
@@ -15,6 +16,7 @@ export interface ResultsData {
 export interface ChampionStats {
   championId: number;
   championName: string;
+  role?: string; // top, jungle, mid, adc, support
   count: number;
 }
 
@@ -67,6 +69,10 @@ export interface Participant {
   kills: number;
   deaths: number;
   assists: number;
+  teamPosition?: string; // TOP, JUNGLE, MIDDLE, BOTTOM, UTILITY
+  individualPosition?: string; // TOP, JUNGLE, MIDDLE, BOTTOM, UTILITY
+  lane?: string; // TOP_LANE, MID_LANE, BOT_LANE, JUNGLE
+  role?: string; // SOLO, DUO_CARRY, DUO_SUPPORT, NONE
 }
 
 export interface MatchInfo {

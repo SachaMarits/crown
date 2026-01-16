@@ -86,13 +86,34 @@ const ChampionCard = ({
           </div>
         </div>
         {/* Nom du champion */}
-        <h3
-          className={`font-bold text-white ${
-            isHero ? "text-4xl sm:text-5xl" : "text-2xl sm:text-3xl"
-          }`}
-        >
-          {champion.championName}
-        </h3>
+        <div className="flex items-center gap-3">
+          <h3
+            className={`font-bold text-white ${
+              isHero ? "text-4xl sm:text-5xl" : "text-2xl sm:text-3xl"
+            }`}
+          >
+            {champion.championName}
+          </h3>
+          {champion.role && (
+            <span
+              className={`px-3 py-1 rounded text-sm font-semibold ${
+                champion.role === "top"
+                  ? "bg-red-600 text-white"
+                  : champion.role === "jungle"
+                  ? "bg-green-600 text-white"
+                  : champion.role === "mid"
+                  ? "bg-blue-600 text-white"
+                  : champion.role === "adc"
+                  ? "bg-yellow-600 text-white"
+                  : champion.role === "support"
+                  ? "bg-purple-600 text-white"
+                  : "bg-gray-600 text-white"
+              }`}
+            >
+              {champion.role.toUpperCase()}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

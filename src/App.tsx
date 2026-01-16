@@ -33,9 +33,10 @@ function App() {
 
     // Filter by role
     if (selectedRole !== "all") {
-      filtered = filtered.filter((champion) =>
-        championMatchesRole(champion.championName, selectedRole)
-      );
+      filtered = filtered.filter((champion) => {
+        if (champion.role) return champion.role === selectedRole;
+        return championMatchesRole(champion.championName, selectedRole);
+      });
     }
 
     // Filter by search
@@ -48,6 +49,14 @@ function App() {
 
     return filtered;
   }, [allChampions, selectedRole, searchQuery]);
+
+  // Count unique champions
+  const uniqueChampionsCount = useMemo(() => {
+    const uniqueChampions = new Set(
+      filteredChampions.map((champion) => champion.championName)
+    );
+    return uniqueChampions.size;
+  }, [filteredChampions]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -62,7 +71,7 @@ function App() {
         <ChampionRanking
           champions={filteredChampions}
           allChampions={allChampions}
-          totalChampions={filteredChampions.length}
+          totalChampions={uniqueChampionsCount}
         />
       </main>
       <Footer />

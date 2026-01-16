@@ -1,5 +1,5 @@
-import { ChampionResult } from '../types';
-import { ChampionCard } from './ChampionCard';
+import { ChampionResult } from "../types";
+import { ChampionCard } from "./ChampionCard";
 
 interface ChampionGridProps {
   champions: ChampionResult[];
@@ -18,9 +18,12 @@ export const ChampionGrid = ({ champions }: ChampionGridProps) => {
           All Champions
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-          {champions.map((champion) => (
-            <ChampionCard key={champion.championName} champion={champion} />
-          ))}
+          {champions.map((champion) => {
+            const key = champion.role
+              ? `${champion.championName}|${champion.role}`
+              : champion.championName;
+            return <ChampionCard key={key} champion={champion} />;
+          })}
         </div>
       </div>
     </section>

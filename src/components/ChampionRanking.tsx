@@ -60,10 +60,13 @@ export const ChampionRanking = ({
 }: ChampionRankingProps) => {
   if (champions.length === 0) return null;
 
-  // Create a map of champion names to their global rank
+  // Create a map of champion+role to their global rank
   const globalRankMap = new Map<string, number>();
   allChampions.forEach((champion, index) => {
-    globalRankMap.set(champion.championName, index + 1);
+    const key = champion.role
+      ? `${champion.championName}|${champion.role}`
+      : champion.championName;
+    globalRankMap.set(key, index + 1);
   });
 
   return (
@@ -86,8 +89,13 @@ export const ChampionRanking = ({
         {/* Champion list in single column */}
         <div className="flex flex-col gap-4 w-full">
           {champions.map((champion, index) => {
-            const rank = globalRankMap.get(champion.championName) || 0;
-            const role = getChampionRole(champion.championName);
+            const key = champion.role
+              ? `${champion.championName}|${champion.role}`
+              : champion.championName;
+            const rank = globalRankMap.get(key) || 0;
+            // Utiliser le rôle réel joué s'il est disponible, sinon le rôle théorique
+            const role =
+              champion.role || getChampionRole(champion.championName);
             const title = getChampionTitle(champion.championName);
 
             // Champion image
@@ -95,7 +103,7 @@ export const ChampionRanking = ({
 
             return (
               <ChampionCard
-                key={champion.championName}
+                key={key}
                 champion={champion}
                 rank={rank}
                 role={role}
@@ -130,8 +138,11 @@ interface ChampionCardProps {
 const ChampionCard = ({
   champion,
   rank,
+  role,
   title,
   imageUrl,
+  getRoleColor,
+  getRoleLabel,
 }: ChampionCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -197,9 +208,20 @@ const ChampionCard = ({
 
         {/* Champion information */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-xl font-bold text-white mb-1">
-            {getChampionDisplayName(champion.championName)}
-          </h3>
+          <div className="flex items-center gap-2 mb-1">
+            {role && (
+              <span
+                className={`px-2 py-0.5 rounded text-xs font-semibold ${getRoleColor(
+                  role
+                )}`}
+              >
+                {getRoleLabel(role)}
+              </span>
+            )}
+            <h3 className="text-xl font-bold text-white">
+              {getChampionDisplayName(champion.championName)}
+            </h3>
+          </div>
           {title && (
             <p className="text-sm text-gray-400 uppercase opacity-40">
               {title}
