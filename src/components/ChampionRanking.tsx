@@ -122,6 +122,57 @@ export const ChampionRanking = ({
 };
 
 /**
+ * Formate le nom du champion pour l'URL dpm.lol
+ * Supprime les espaces et utilise le PascalCase (AurelionSol, TwistedFate, etc.)
+ * Préserve les majuscules existantes comme "IV" dans "JarvanIV"
+ */
+const formatChampionNameForUrl = (championName: string): string => {
+  const displayName = getChampionDisplayName(championName);
+  // Supprime les apostrophes et les points
+  let formatted = displayName.replace(/'/g, '').replace(/\./g, '');
+
+  // Si le nom contient des espaces, utilise le PascalCase
+  if (formatted.includes(' ')) {
+    const words = formatted.split(/\s+/);
+    formatted = words
+      .map((word) => {
+        // Si le mot est déjà tout en majuscules (comme "IV"), le garder tel quel
+        if (word === word.toUpperCase() && word.length > 1) {
+          return word;
+        }
+        // Sinon, mettre la première lettre en majuscule et le reste en minuscule
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      })
+      .join('');
+  } else {
+    // Si pas d'espaces, mettre juste la première lettre en majuscule
+    formatted = formatted.charAt(0).toUpperCase() + formatted.slice(1).toLowerCase();
+  }
+
+  return formatted;
+};
+
+/**
+ * Mappe le rôle du champion vers la lane dpm.lol
+ */
+const mapRoleToLane = (role: string): string => {
+  switch (role) {
+    case 'top':
+      return 'top';
+    case 'jungle':
+      return 'jungle';
+    case 'mid':
+      return 'middle';
+    case 'adc':
+      return 'bottom';
+    case 'support':
+      return 'utility';
+    default:
+      return 'middle'; // Par défaut
+  }
+};
+
+/**
  * ChampionCard component with animation on viewport entry
  */
 interface ChampionCardProps {
@@ -145,7 +196,12 @@ const ChampionCard = ({
   getRoleLabel,
 }: ChampionCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
+
+  // Construire l'URL dpm.lol
+  const formattedName = formatChampionNameForUrl(champion.championName);
+  const lane = mapRoleToLane(role);
+  const dpmUrl = `https://dpm.lol/champions/${formattedName}/build?lane=${lane}&tier=master_plus`;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -175,11 +231,13 @@ const ChampionCard = ({
   }, []);
 
   return (
-    <div
+    <a
       ref={cardRef}
-      className={`relative bg-gradient-to-r from-purple-900/20 to-black/40 backdrop-blur-sm rounded-lg border border-purple-500/20 p-5 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 ${
-        isVisible ? "fade-in-up" : "opacity-0"
-      }`}
+      href={dpmUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`relative bg-gradient-to-r from-purple-900/20 to-black/40 backdrop-blur-sm rounded-lg border border-purple-500/20 p-5 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer block ${isVisible ? "fade-in-up" : "opacity-0"
+        }`}
     >
       <div className="flex items-center gap-6">
         {/* Champion image with glow effect */}
@@ -251,6 +309,6 @@ const ChampionCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };

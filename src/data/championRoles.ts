@@ -4,7 +4,7 @@
  */
 export type Role = "top" | "jungle" | "mid" | "adc" | "support" | "all";
 
-export const championRoles: Record<string, Role[]> = {
+const championRoles: Record<string, Role[]> = {
   // Top
   Aatrox: ["top"],
   Akali: ["mid", "top"],

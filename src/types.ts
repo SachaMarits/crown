@@ -6,12 +6,6 @@ export interface ChampionResult {
   count: number;
 }
 
-export interface ResultsData {
-  timestamp: string;
-  totalPlayersAnalyzed: number;
-  results: ChampionResult[];
-}
-
 // Types pour le backend (API Riot)
 export interface ChampionStats {
   championId: number;
