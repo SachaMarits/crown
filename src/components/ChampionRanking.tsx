@@ -99,7 +99,7 @@ export const ChampionRanking = ({
             const title = getChampionTitle(champion.championName);
 
             // Champion image
-            const imageUrl = `https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/${champion.championName}.png`;
+            const imageUrl = `https://ddragon.leagueoflegends.com/cdn/16.2.1/img/champion/${champion.championName}.png`;
 
             return (
               <ChampionCard
