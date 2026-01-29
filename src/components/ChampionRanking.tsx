@@ -289,7 +289,7 @@ const ChampionCard = ({
 
         {/* Statistics */}
         <div className="flex-shrink-0 text-right">
-          <div className="flex items-center justify-end gap-2 mb-2">
+          <div className="flex items-center justify-end gap-2 mb-2 group relative">
             <svg
               className="w-5 h-5 text-gray-400"
               fill="none"
@@ -306,7 +306,66 @@ const ChampionCard = ({
             <span className="text-white font-semibold text-lg">
               {champion.count}
             </span>
+            <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-gray-700">
+              <div className="font-semibold mb-1">Times played</div>
+              <div className="text-gray-300">
+                Current snapshot: {champion.count}
+              </div>
+              <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+            </div>
           </div>
+          {champion.trendPercentage !== undefined && (
+            <div className="flex items-center justify-end gap-1 group relative">
+              {champion.trendPercentage >= 0 ? (
+                <svg
+                  className="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-4 h-4 text-red-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>
+              )}
+              <span
+                className={`font-semibold text-sm ${champion.trendPercentage >= 0
+                  ? "text-green-500"
+                  : "text-red-500"
+                  }`}
+              >
+                {champion.trendPercentage >= 0 ? "+" : ""}
+                {champion.trendPercentage.toFixed(1)}%
+              </span>
+              {/* Tooltip */}
+              {champion.averageHistoricalCount !== undefined && (
+                <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-gray-700">
+                  <div className="font-semibold mb-1">Last 7 days average</div>
+                  <div className="text-gray-300">
+                    {champion.averageHistoricalCount.toFixed(1)} times played
+                  </div>
+                  <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </a>

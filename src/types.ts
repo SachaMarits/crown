@@ -4,6 +4,8 @@ export interface ChampionResult {
   championName: string;
   role?: string; // top, jungle, mid, adc, support
   count: number;
+  trendPercentage?: number; // Pourcentage de tendance (positif = hausse, négatif = baisse)
+  averageHistoricalCount?: number; // Moyenne historique pour le tooltip
 }
 
 // Types pour le backend (API Riot)

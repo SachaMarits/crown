@@ -143,8 +143,38 @@ async function main() {
     const formattedResults = formatResults(aggregatedStats);
     console.log(formattedResults);
 
-    // 6. Sauvegarder dans un fichier JSON
-    const outputPath = path.join(process.cwd(), "public", "results.json");
+    // 6. Rotation des fichiers historiques et sauvegarde
+    const publicDir = path.join(process.cwd(), "public");
+    
+    // Supprimer le fichier le plus ancien (results-6.json) s'il existe
+    const oldestFile = path.join(publicDir, "results-6.json");
+    try {
+      await fs.unlink(oldestFile);
+      console.log("🗑️  Fichier ancien supprimé: results-6.json");
+    } catch (error) {
+      // Le fichier n'existe peut-être pas, ce n'est pas grave
+    }
+
+    // Décaler les fichiers historiques (du plus récent au plus ancien)
+    // results-5.json → results-6.json
+    // results-4.json → results-5.json
+    // results-3.json → results-4.json
+    // results-2.json → results-3.json
+    // results-1.json → results-2.json
+    // results.json → results-1.json
+    for (let i = 5; i >= 1; i--) {
+      const oldFile = path.join(publicDir, `results-${i}.json`);
+      const newFile = path.join(publicDir, `results-${i + 1}.json`);
+      try {
+        await fs.rename(oldFile, newFile);
+        console.log(`📦 Fichier décalé: results-${i}.json → results-${i + 1}.json`);
+      } catch (error) {
+        // Le fichier n'existe peut-être pas, ce n'est pas grave
+      }
+    }
+
+    // Sauvegarder le nouveau fichier results.json
+    const outputPath = path.join(publicDir, "results.json");
     const outputData = {
       timestamp: new Date().toISOString(),
       totalPlayersAnalyzed: allPlayerChampionCounts.length,
@@ -156,7 +186,7 @@ async function main() {
       JSON.stringify(outputData, null, 2),
       "utf-8"
     );
-    console.log(`💾 Résultats sauvegardés dans: ${outputPath}\n`);
+    console.log(`💾 Nouveaux résultats sauvegardés dans: ${outputPath}\n`);
   } catch (error: any) {
     console.error("❌ Erreur fatale:", error.message);
     process.exit(1);
