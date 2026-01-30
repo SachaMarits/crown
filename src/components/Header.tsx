@@ -32,6 +32,7 @@ export const Header = () => {
       year: "numeric",
       hour: "2-digit",
       minute: "2-digit",
+      timeZone: "UTC"
     });
   };
 
@@ -127,7 +128,7 @@ export const Header = () => {
                 Last update: {lastUpdate}
               </span>
               <span className="text-purple-400/60 text-xs">
-                Refreshes 3:00-4:00 AM UTC
+                Refreshes 3:00-5:00 AM UTC
               </span>
             </div>
           </div>
