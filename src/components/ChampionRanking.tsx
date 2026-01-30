@@ -98,8 +98,11 @@ export const ChampionRanking = ({
               champion.role || getChampionRole(champion.championName);
             const title = getChampionTitle(champion.championName);
 
-            // Champion image
-            const imageUrl = `https://ddragon.leagueoflegends.com/cdn/16.2.1/img/champion/${champion.championName}.png`;
+            // Champion image - FiddleSticks doit être en minuscule pour ddragon
+            const ddragonChampionName = champion.championName === "FiddleSticks"
+              ? "Fiddlesticks"
+              : champion.championName;
+            const imageUrl = `https://ddragon.leagueoflegends.com/cdn/16.2.1/img/champion/${ddragonChampionName}.png`;
 
             return (
               <ChampionCard
@@ -314,46 +317,75 @@ const ChampionCard = ({
               <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
             </div>
           </div>
-          {champion.trendPercentage !== undefined && (
-            <div className="flex items-center justify-end gap-1 group relative">
-              {champion.trendPercentage >= 0 ? (
-                <svg
-                  className="w-4 h-4 text-green-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 10l7-7m0 0l7 7m-7-7v18"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-4 h-4 text-red-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
-                </svg>
-              )}
-              <span
-                className={`font-semibold text-sm ${champion.trendPercentage >= 0
-                  ? "text-green-500"
-                  : "text-red-500"
-                  }`}
-              >
-                {champion.trendPercentage >= 0 ? "+" : ""}
-                {champion.trendPercentage.toFixed(1)}%
+          {/* Badge NEW ou indicateur de tendance */}
+          {champion.count > 0 &&
+            (champion.averageHistoricalCount === undefined || champion.averageHistoricalCount === 0) ? (
+            <div className="flex items-center justify-end gap-1">
+              <span className="px-2 py-0.5 rounded text-xs font-semibold bg-blue-500 text-white">
+                NEW
               </span>
+            </div>
+          ) : champion.trendPercentage !== undefined ? (
+            <div className="flex items-center justify-end gap-1 group relative">
+              {/* Cas où le playrate est stable (proche de 0%) */}
+              {Math.abs(champion.trendPercentage) < 0.5 ? (
+                <>
+                  <svg
+                    className="w-4 h-4 text-orange-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 12h14"
+                    />
+                  </svg>
+                  <span className="font-semibold text-sm text-orange-500">
+                    Stable
+                  </span>
+                </>
+              ) : champion.trendPercentage > 0 ? (
+                <>
+                  <svg
+                    className="w-4 h-4 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 10l7-7m0 0l7 7m-7-7v18"
+                    />
+                  </svg>
+                  <span className="font-semibold text-sm text-green-500">
+                    +{champion.trendPercentage.toFixed(1)}%
+                  </span>
+                </>
+              ) : (
+                <>
+                  <svg
+                    className="w-4 h-4 text-red-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                  </svg>
+                  <span className="font-semibold text-sm text-red-500">
+                    {champion.trendPercentage.toFixed(1)}%
+                  </span>
+                </>
+              )}
               {/* Tooltip */}
               {champion.averageHistoricalCount !== undefined && (
                 <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 border border-gray-700">
@@ -365,7 +397,7 @@ const ChampionCard = ({
                 </div>
               )}
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </a>
