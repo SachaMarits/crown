@@ -1,60 +1,54 @@
 {
-  "timestamp": "2026-10-01T10:34:09.799Z",
+  "timestamp": "2026-10-02T10:10:40.665Z",
   "totalPlayersAnalyzed": 100,
   "results": [
     {
       "championId": 0,
-      "championName": "Ezreal",
-      "role": "adc",
-      "count": 61
-    },
-    {
-      "championId": 0,
       "championName": "LeeSin",
       "role": "jungle",
-      "count": 60
+      "count": 55
     },
     {
       "championId": 0,
       "championName": "Syndra",
       "role": "mid",
-      "count": 47
+      "count": 51
+    },
+    {
+      "championId": 0,
+      "championName": "Ezreal",
+      "role": "adc",
+      "count": 45
     },
     {
       "championId": 0,
       "championName": "Ahri",
       "role": "mid",
-      "count": 45
-    },
-    {
-      "championId": 0,
-      "championName": "Yunara",
-      "role": "adc",
-      "count": 37
-    },
-    {
-      "championId": 0,
-      "championName": "Caitlyn",
-      "role": "adc",
-      "count": 37
+      "count": 44
     },
     {
       "championId": 0,
       "championName": "Jhin",
       "role": "adc",
-      "count": 36
+      "count": 42
     },
     {
       "championId": 0,
-      "championName": "Ryze",
-      "role": "mid",
+      "championName": "Caitlyn",
+      "role": "adc",
       "count": 35
     },
     {
       "championId": 0,
       "championName": "Kalista",
       "role": "adc",
-      "count": 34
+      "count": 35
+    },
+    {
+      "championId": 0,
+      "championName": "Yunara",
+      "role": "adc",
+      "count": 32
     },
     {
       "championId": 0,
@@ -64,25 +58,43 @@
     },
     {
       "championId": 0,
+      "championName": "Bard",
+      "role": "support",
+      "count": 32
+    },
+    {
+      "championId": 0,
       "championName": "Tristana",
       "role": "adc",
+      "count": 29
+    },
+    {
+      "championId": 0,
+      "championName": "Pyke",
+      "role": "support",
+      "count": 28
+    },
+    {
+      "championId": 0,
+      "championName": "Sylas",
+      "role": "jungle",
       "count": 27
     },
     {
       "championId": 0,
-      "championName": "Riven",
+      "championName": "Zoe",
       "role": "mid",
       "count": 27
     },
     {
       "championId": 0,
-      "championName": "Bard",
-      "role": "support",
-      "count": 26
+      "championName": "Ryze",
+      "role": "mid",
+      "count": 25
     },
     {
       "championId": 0,
-      "championName": "Sylas",
+      "championName": "Qiyana",
       "role": "jungle",
       "count": 25
     },
@@ -90,37 +102,7 @@
       "championId": 0,
       "championName": "Akali",
       "role": "mid",
-      "count": 24
-    },
-    {
-      "championId": 0,
-      "championName": "JarvanIV",
-      "role": "jungle",
-      "count": 24
-    },
-    {
-      "championId": 0,
-      "championName": "Pyke",
-      "role": "support",
       "count": 23
-    },
-    {
-      "championId": 0,
-      "championName": "Qiyana",
-      "role": "jungle",
-      "count": 23
-    },
-    {
-      "championId": 0,
-      "championName": "Leblanc",
-      "role": "mid",
-      "count": 22
-    },
-    {
-      "championId": 0,
-      "championName": "Camille",
-      "role": "top",
-      "count": 22
     },
     {
       "championId": 0,
@@ -130,8 +112,20 @@
     },
     {
       "championId": 0,
-      "championName": "Viktor",
+      "championName": "Riven",
       "role": "mid",
+      "count": 21
+    },
+    {
+      "championId": 0,
+      "championName": "Camille",
+      "role": "top",
+      "count": 21
+    },
+    {
+      "championId": 0,
+      "championName": "Lux",
+      "role": "support",
       "count": 21
     },
     {
@@ -142,38 +136,38 @@
     },
     {
       "championId": 0,
-      "championName": "Zeri",
-      "role": "adc",
-      "count": 20
-    },
-    {
-      "championId": 0,
-      "championName": "Lux",
-      "role": "support",
-      "count": 20
-    },
-    {
-      "championId": 0,
-      "championName": "Yone",
+      "championName": "Viktor",
       "role": "mid",
-      "count": 18
+      "count": 19
     },
     {
       "championId": 0,
-      "championName": "Jayce",
-      "role": "top",
-      "count": 18
-    },
-    {
-      "championId": 0,
-      "championName": "Seraphine",
+      "championName": "Rell",
       "role": "support",
-      "count": 18
+      "count": 19
+    },
+    {
+      "championId": 0,
+      "championName": "Aatrox",
+      "role": "jungle",
+      "count": 19
     },
     {
       "championId": 0,
       "championName": "Soraka",
       "role": "support",
+      "count": 18
+    },
+    {
+      "championId": 0,
+      "championName": "Talon",
+      "role": "jungle",
+      "count": 18
+    },
+    {
+      "championId": 0,
+      "championName": "JarvanIV",
+      "role": "jungle",
       "count": 18
     },
     {
@@ -184,26 +178,14 @@
     },
     {
       "championId": 0,
-      "championName": "Aurora",
-      "role": "mid",
-      "count": 17
-    },
-    {
-      "championId": 0,
-      "championName": "Nautilus",
-      "role": "support",
-      "count": 17
-    },
-    {
-      "championId": 0,
-      "championName": "Yone",
+      "championName": "Jayce",
       "role": "top",
       "count": 17
     },
     {
       "championId": 0,
-      "championName": "Aatrox",
-      "role": "jungle",
+      "championName": "Jinx",
+      "role": "adc",
       "count": 17
     },
     {
@@ -214,14 +196,14 @@
     },
     {
       "championId": 0,
-      "championName": "Sylas",
-      "role": "mid",
-      "count": 16
+      "championName": "Nidalee",
+      "role": "jungle",
+      "count": 17
     },
     {
       "championId": 0,
-      "championName": "Talon",
-      "role": "jungle",
+      "championName": "Alistar",
+      "role": "support",
       "count": 16
     },
     {
@@ -232,27 +214,33 @@
     },
     {
       "championId": 0,
-      "championName": "Jinx",
-      "role": "adc",
-      "count": 16
-    },
-    {
-      "championId": 0,
-      "championName": "Ambessa",
-      "role": "jungle",
-      "count": 16
-    },
-    {
-      "championId": 0,
-      "championName": "Fiora",
+      "championName": "Jax",
       "role": "top",
       "count": 16
     },
     {
       "championId": 0,
-      "championName": "Nidalee",
-      "role": "jungle",
-      "count": 16
+      "championName": "Leblanc",
+      "role": "mid",
+      "count": 15
+    },
+    {
+      "championId": 0,
+      "championName": "Sylas",
+      "role": "mid",
+      "count": 15
+    },
+    {
+      "championId": 0,
+      "championName": "Aurora",
+      "role": "mid",
+      "count": 15
+    },
+    {
+      "championId": 0,
+      "championName": "Yone",
+      "role": "mid",
+      "count": 15
     },
     {
       "championId": 0,
@@ -262,15 +250,21 @@
     },
     {
       "championId": 0,
-      "championName": "Khazix",
-      "role": "jungle",
+      "championName": "Seraphine",
+      "role": "support",
       "count": 15
     },
     {
       "championId": 0,
-      "championName": "Alistar",
-      "role": "support",
-      "count": 15
+      "championName": "Kaisa",
+      "role": "adc",
+      "count": 14
+    },
+    {
+      "championId": 0,
+      "championName": "Annie",
+      "role": "mid",
+      "count": 14
     },
     {
       "championId": 0,
@@ -280,32 +274,20 @@
     },
     {
       "championId": 0,
-      "championName": "Orianna",
+      "championName": "Lucian",
       "role": "mid",
       "count": 14
     },
     {
       "championId": 0,
-      "championName": "Jayce",
-      "role": "mid",
-      "count": 13
+      "championName": "Fiora",
+      "role": "top",
+      "count": 14
     },
     {
       "championId": 0,
-      "championName": "Ekko",
-      "role": "mid",
-      "count": 13
-    },
-    {
-      "championId": 0,
-      "championName": "Rell",
-      "role": "support",
-      "count": 13
-    },
-    {
-      "championId": 0,
-      "championName": "Zoe",
-      "role": "mid",
+      "championName": "Ambessa",
+      "role": "top",
       "count": 13
     },
     {
@@ -316,8 +298,8 @@
     },
     {
       "championId": 0,
-      "championName": "Lulu",
-      "role": "support",
+      "championName": "Orianna",
+      "role": "mid",
       "count": 12
     },
     {
@@ -328,26 +310,56 @@
     },
     {
       "championId": 0,
+      "championName": "Jayce",
+      "role": "mid",
+      "count": 12
+    },
+    {
+      "championId": 0,
+      "championName": "Chogath",
+      "role": "jungle",
+      "count": 12
+    },
+    {
+      "championId": 0,
       "championName": "Pantheon",
       "role": "top",
       "count": 12
     },
     {
       "championId": 0,
-      "championName": "Annie",
-      "role": "mid",
+      "championName": "Yone",
+      "role": "top",
       "count": 12
     },
     {
       "championId": 0,
-      "championName": "Ambessa",
-      "role": "top",
+      "championName": "Khazix",
+      "role": "jungle",
+      "count": 12
+    },
+    {
+      "championId": 0,
+      "championName": "Varus",
+      "role": "adc",
       "count": 12
     },
     {
       "championId": 0,
       "championName": "Karma",
       "role": "support",
+      "count": 12
+    },
+    {
+      "championId": 0,
+      "championName": "Lulu",
+      "role": "support",
+      "count": 12
+    },
+    {
+      "championId": 0,
+      "championName": "MonkeyKing",
+      "role": "jungle",
       "count": 12
     },
     {
@@ -364,8 +376,8 @@
     },
     {
       "championId": 0,
-      "championName": "Jax",
-      "role": "top",
+      "championName": "Ekko",
+      "role": "mid",
       "count": 12
     },
     {
@@ -376,32 +388,38 @@
     },
     {
       "championId": 0,
-      "championName": "Gnar",
-      "role": "top",
-      "count": 11
-    },
-    {
-      "championId": 0,
-      "championName": "Kaisa",
-      "role": "adc",
-      "count": 11
-    },
-    {
-      "championId": 0,
-      "championName": "MonkeyKing",
+      "championName": "Vi",
       "role": "jungle",
       "count": 11
     },
     {
       "championId": 0,
-      "championName": "Riven",
-      "role": "top",
+      "championName": "Zeri",
+      "role": "adc",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "Naafiri",
+      "role": "jungle",
+      "count": 11
+    },
+    {
+      "championId": 0,
+      "championName": "TwistedFate",
+      "role": "mid",
       "count": 10
     },
     {
       "championId": 0,
-      "championName": "Varus",
-      "role": "adc",
+      "championName": "Nautilus",
+      "role": "support",
+      "count": 10
+    },
+    {
+      "championId": 0,
+      "championName": "Pantheon",
+      "role": "support",
       "count": 10
     },
     {
@@ -412,8 +430,8 @@
     },
     {
       "championId": 0,
-      "championName": "Vi",
-      "role": "jungle",
+      "championName": "Rakan",
+      "role": "support",
       "count": 10
     },
     {
@@ -424,44 +442,26 @@
     },
     {
       "championId": 0,
-      "championName": "Chogath",
-      "role": "jungle",
+      "championName": "Gnar",
+      "role": "top",
       "count": 9
     },
     {
       "championId": 0,
-      "championName": "Pantheon",
+      "championName": "Leona",
       "role": "support",
       "count": 9
     },
     {
       "championId": 0,
-      "championName": "Lucian",
-      "role": "mid",
-      "count": 9
-    },
-    {
-      "championId": 0,
-      "championName": "Viktor",
-      "role": "adc",
-      "count": 9
-    },
-    {
-      "championId": 0,
-      "championName": "Viego",
+      "championName": "XinZhao",
       "role": "jungle",
       "count": 9
     },
     {
       "championId": 0,
-      "championName": "Sylas",
-      "role": "adc",
-      "count": 9
-    },
-    {
-      "championId": 0,
-      "championName": "Syndra",
-      "role": "adc",
+      "championName": "Zilean",
+      "role": "mid",
       "count": 9
     },
     {
@@ -472,38 +472,44 @@
     },
     {
       "championId": 0,
-      "championName": "XinZhao",
+      "championName": "Renekton",
+      "role": "top",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Riven",
+      "role": "top",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Viego",
       "role": "jungle",
       "count": 8
     },
     {
       "championId": 0,
-      "championName": "Irelia",
+      "championName": "Yasuo",
       "role": "mid",
       "count": 8
     },
     {
       "championId": 0,
-      "championName": "Rakan",
-      "role": "support",
+      "championName": "Syndra",
+      "role": "adc",
       "count": 8
     },
     {
       "championId": 0,
-      "championName": "Naafiri",
+      "championName": "Lux",
+      "role": "mid",
+      "count": 8
+    },
+    {
+      "championId": 0,
+      "championName": "Olaf",
       "role": "jungle",
-      "count": 8
-    },
-    {
-      "championId": 0,
-      "championName": "Neeko",
-      "role": "support",
-      "count": 8
-    },
-    {
-      "championId": 0,
-      "championName": "Zilean",
-      "role": "mid",
       "count": 8
     },
     {
@@ -514,44 +520,50 @@
     },
     {
       "championId": 0,
-      "championName": "Yunara",
-      "role": "support",
-      "count": 7
-    },
-    {
-      "championId": 0,
       "championName": "Akali",
       "role": "top",
       "count": 7
     },
     {
       "championId": 0,
-      "championName": "Taliyah",
-      "role": "mid",
-      "count": 7
-    },
-    {
-      "championId": 0,
-      "championName": "Yasuo",
-      "role": "mid",
-      "count": 7
-    },
-    {
-      "championId": 0,
-      "championName": "Yasuo",
-      "role": "top",
-      "count": 7
-    },
-    {
-      "championId": 0,
-      "championName": "Lucian",
+      "championName": "Sivir",
       "role": "adc",
       "count": 7
     },
     {
       "championId": 0,
-      "championName": "Lux",
+      "championName": "Viktor",
+      "role": "adc",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Sylas",
+      "role": "adc",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Irelia",
       "role": "mid",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Malphite",
+      "role": "top",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Ambessa",
+      "role": "jungle",
+      "count": 7
+    },
+    {
+      "championId": 0,
+      "championName": "Jayce",
+      "role": "jungle",
       "count": 7
     },
     {
@@ -562,26 +574,8 @@
     },
     {
       "championId": 0,
-      "championName": "Tristana",
-      "role": "support",
-      "count": 6
-    },
-    {
-      "championId": 0,
-      "championName": "TwistedFate",
-      "role": "mid",
-      "count": 6
-    },
-    {
-      "championId": 0,
-      "championName": "Renekton",
+      "championName": "Yasuo",
       "role": "top",
-      "count": 6
-    },
-    {
-      "championId": 0,
-      "championName": "Sivir",
-      "role": "adc",
       "count": 6
     },
     {
@@ -592,20 +586,14 @@
     },
     {
       "championId": 0,
-      "championName": "Zaahen",
-      "role": "top",
+      "championName": "Taliyah",
+      "role": "mid",
       "count": 6
     },
     {
       "championId": 0,
-      "championName": "KSante",
-      "role": "top",
-      "count": 6
-    },
-    {
-      "championId": 0,
-      "championName": "Malphite",
-      "role": "top",
+      "championName": "Yuumi",
+      "role": "support",
       "count": 6
     },
     {
@@ -617,7 +605,7 @@
     {
       "championId": 0,
       "championName": "Olaf",
-      "role": "jungle",
+      "role": "top",
       "count": 6
     },
     {
@@ -628,14 +616,26 @@
     },
     {
       "championId": 0,
-      "championName": "Irelia",
-      "role": "top",
-      "count": 5
+      "championName": "Neeko",
+      "role": "support",
+      "count": 6
     },
     {
       "championId": 0,
       "championName": "Viktor",
       "role": "support",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Yunara",
+      "role": "support",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Anivia",
+      "role": "mid",
       "count": 5
     },
     {
@@ -658,19 +658,7 @@
     },
     {
       "championId": 0,
-      "championName": "Lissandra",
-      "role": "mid",
-      "count": 5
-    },
-    {
-      "championId": 0,
       "championName": "Ashe",
-      "role": "adc",
-      "count": 5
-    },
-    {
-      "championId": 0,
-      "championName": "Riven",
       "role": "adc",
       "count": 5
     },
@@ -682,8 +670,14 @@
     },
     {
       "championId": 0,
-      "championName": "Xayah",
-      "role": "adc",
+      "championName": "Sion",
+      "role": "top",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Zaahen",
+      "role": "top",
       "count": 5
     },
     {
@@ -694,8 +688,14 @@
     },
     {
       "championId": 0,
-      "championName": "Akshan",
+      "championName": "Ornn",
       "role": "top",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Xayah",
+      "role": "adc",
       "count": 5
     },
     {
@@ -706,14 +706,50 @@
     },
     {
       "championId": 0,
+      "championName": "KSante",
+      "role": "top",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Zoe",
+      "role": "top",
+      "count": 5
+    },
+    {
+      "championId": 0,
       "championName": "Shyvana",
       "role": "jungle",
       "count": 5
     },
     {
       "championId": 0,
+      "championName": "MissFortune",
+      "role": "adc",
+      "count": 5
+    },
+    {
+      "championId": 0,
+      "championName": "Tristana",
+      "role": "support",
+      "count": 4
+    },
+    {
+      "championId": 0,
       "championName": "Pantheon",
       "role": "jungle",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Lissandra",
+      "role": "mid",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Poppy",
+      "role": "support",
       "count": 4
     },
     {
@@ -730,19 +766,25 @@
     },
     {
       "championId": 0,
-      "championName": "Ornn",
-      "role": "top",
+      "championName": "Rengar",
+      "role": "jungle",
       "count": 4
     },
     {
       "championId": 0,
-      "championName": "Jax",
-      "role": "support",
+      "championName": "Nocturne",
+      "role": "jungle",
       "count": 4
     },
     {
       "championId": 0,
-      "championName": "Yuumi",
+      "championName": "AurelionSol",
+      "role": "mid",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Jhin",
       "role": "support",
       "count": 4
     },
@@ -754,8 +796,8 @@
     },
     {
       "championId": 0,
-      "championName": "Nocturne",
-      "role": "jungle",
+      "championName": "Akshan",
+      "role": "top",
       "count": 4
     },
     {
@@ -766,20 +808,20 @@
     },
     {
       "championId": 0,
-      "championName": "Velkoz",
+      "championName": "Zoe",
       "role": "support",
       "count": 4
     },
     {
       "championId": 0,
-      "championName": "Lillia",
-      "role": "jungle",
+      "championName": "Milio",
+      "role": "support",
       "count": 4
     },
     {
       "championId": 0,
-      "championName": "Zoe",
-      "role": "top",
+      "championName": "Velkoz",
+      "role": "support",
       "count": 4
     },
     {
@@ -790,20 +832,26 @@
     },
     {
       "championId": 0,
-      "championName": "Jayce",
-      "role": "jungle",
-      "count": 4
-    },
-    {
-      "championId": 0,
       "championName": "Nasus",
       "role": "top",
       "count": 4
     },
     {
       "championId": 0,
-      "championName": "Shen",
+      "championName": "Ezreal",
+      "role": "support",
+      "count": 4
+    },
+    {
+      "championId": 0,
+      "championName": "Irelia",
       "role": "top",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Renata",
+      "role": "support",
       "count": 3
     },
     {
@@ -814,13 +862,7 @@
     },
     {
       "championId": 0,
-      "championName": "Poppy",
-      "role": "support",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Rengar",
+      "championName": "Pyke",
       "role": "jungle",
       "count": 3
     },
@@ -832,14 +874,8 @@
     },
     {
       "championId": 0,
-      "championName": "Sion",
-      "role": "top",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Leona",
-      "role": "support",
+      "championName": "Zyra",
+      "role": "jungle",
       "count": 3
     },
     {
@@ -850,50 +886,8 @@
     },
     {
       "championId": 0,
-      "championName": "Zeri",
-      "role": "support",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Jhin",
-      "role": "support",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Kaisa",
-      "role": "support",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Aurora",
+      "championName": "Illaoi",
       "role": "top",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Sona",
-      "role": "support",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Rumble",
-      "role": "top",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Camille",
-      "role": "mid",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Ambessa",
-      "role": "mid",
       "count": 3
     },
     {
@@ -904,14 +898,50 @@
     },
     {
       "championId": 0,
-      "championName": "Udyr",
-      "role": "jungle",
+      "championName": "Jax",
+      "role": "support",
       "count": 3
     },
     {
       "championId": 0,
-      "championName": "Milio",
-      "role": "support",
+      "championName": "Veigar",
+      "role": "adc",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Ekko",
+      "role": "adc",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Aurora",
+      "role": "top",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Quinn",
+      "role": "mid",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Camille",
+      "role": "mid",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Lucian",
+      "role": "adc",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Lillia",
+      "role": "jungle",
       "count": 3
     },
     {
@@ -922,20 +952,14 @@
     },
     {
       "championId": 0,
+      "championName": "Kaisa",
+      "role": "support",
+      "count": 3
+    },
+    {
+      "championId": 0,
       "championName": "Hwei",
       "role": "adc",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "AurelionSol",
-      "role": "mid",
-      "count": 3
-    },
-    {
-      "championId": 0,
-      "championName": "Olaf",
-      "role": "top",
       "count": 3
     },
     {
@@ -946,13 +970,19 @@
     },
     {
       "championId": 0,
+      "championName": "Blitzcrank",
+      "role": "support",
+      "count": 3
+    },
+    {
+      "championId": 0,
       "championName": "Jinx",
       "role": "support",
       "count": 3
     },
     {
       "championId": 0,
-      "championName": "Ezreal",
+      "championName": "Leblanc",
       "role": "support",
       "count": 3
     },
@@ -970,55 +1000,61 @@
     },
     {
       "championId": 0,
-      "championName": "Leblanc",
-      "role": "support",
+      "championName": "Varus",
+      "role": "top",
       "count": 3
     },
     {
       "championId": 0,
-      "championName": "Naafiri",
+      "championName": "Zoe",
       "role": "adc",
       "count": 3
     },
     {
       "championId": 0,
-      "championName": "Renata",
+      "championName": "Smolder",
+      "role": "adc",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "KogMaw",
+      "role": "adc",
+      "count": 3
+    },
+    {
+      "championId": 0,
+      "championName": "Zeri",
       "role": "support",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Anivia",
-      "role": "mid",
+      "championName": "Shen",
+      "role": "top",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Bard",
-      "role": "jungle",
+      "championName": "Tristana",
+      "role": "top",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Pyke",
+      "championName": "Camille",
+      "role": "support",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Riven",
       "role": "jungle",
       "count": 2
     },
     {
       "championId": 0,
       "championName": "Chogath",
-      "role": "top",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Zyra",
-      "role": "jungle",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Illaoi",
       "role": "top",
       "count": 2
     },
@@ -1036,61 +1072,31 @@
     },
     {
       "championId": 0,
-      "championName": "Ekko",
-      "role": "adc",
+      "championName": "Rumble",
+      "role": "top",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Zoe",
+      "championName": "Quinn",
+      "role": "top",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Caitlyn",
       "role": "support",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Kalista",
-      "role": "top",
+      "championName": "Olaf",
+      "role": "mid",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Gwen",
-      "role": "top",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Varus",
-      "role": "support",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Anivia",
-      "role": "top",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Veigar",
-      "role": "adc",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "MissFortune",
-      "role": "adc",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Elise",
-      "role": "jungle",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Hecarim",
+      "championName": "Udyr",
       "role": "jungle",
       "count": 2
     },
@@ -1098,6 +1104,24 @@
       "championId": 0,
       "championName": "Zilean",
       "role": "support",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Tryndamere",
+      "role": "mid",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Naafiri",
+      "role": "adc",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Leblanc",
+      "role": "top",
       "count": 2
     },
     {
@@ -1114,49 +1138,25 @@
     },
     {
       "championId": 0,
-      "championName": "Leblanc",
-      "role": "top",
-      "count": 2
-    },
-    {
-      "championId": 0,
       "championName": "Syndra",
       "role": "support",
       "count": 2
     },
     {
       "championId": 0,
-      "championName": "Janna",
+      "championName": "Corki",
+      "role": "mid",
+      "count": 2
+    },
+    {
+      "championId": 0,
+      "championName": "Sona",
       "role": "support",
       "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Varus",
-      "role": "top",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Senna",
-      "role": "support",
-      "count": 2
-    },
-    {
-      "championId": 0,
-      "championName": "Tristana",
-      "role": "top",
-      "count": 1
     },
     {
       "championId": 0,
       "championName": "TahmKench",
-      "role": "support",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Camille",
       "role": "support",
       "count": 1
     },
@@ -1187,6 +1187,12 @@
     {
       "championId": 0,
       "championName": "Riven",
+      "role": "adc",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Riven",
       "role": "support",
       "count": 1
     },
@@ -1204,8 +1210,14 @@
     },
     {
       "championId": 0,
-      "championName": "Nilah",
-      "role": "support",
+      "championName": "Soraka",
+      "role": "jungle",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Vex",
+      "role": "mid",
       "count": 1
     },
     {
@@ -1217,12 +1229,6 @@
     {
       "championId": 0,
       "championName": "AurelionSol",
-      "role": "jungle",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Karthus",
       "role": "jungle",
       "count": 1
     },
@@ -1246,13 +1252,25 @@
     },
     {
       "championId": 0,
-      "championName": "Soraka",
-      "role": "jungle",
+      "championName": "Ahri",
+      "role": "top",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Vex",
+      "championName": "TwistedFate",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Viktor",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Veigar",
       "role": "mid",
       "count": 1
     },
@@ -1264,8 +1282,8 @@
     },
     {
       "championId": 0,
-      "championName": "Trundle",
-      "role": "top",
+      "championName": "Nilah",
+      "role": "support",
       "count": 1
     },
     {
@@ -1282,14 +1300,20 @@
     },
     {
       "championId": 0,
-      "championName": "Nami",
-      "role": "jungle",
+      "championName": "Ambessa",
+      "role": "mid",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Nautilus",
-      "role": "jungle",
+      "championName": "Trundle",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Yasuo",
+      "role": "support",
       "count": 1
     },
     {
@@ -1300,19 +1324,31 @@
     },
     {
       "championId": 0,
-      "championName": "Gragas",
+      "championName": "Nautilus",
       "role": "jungle",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Shen",
-      "role": "support",
+      "championName": "Nami",
+      "role": "jungle",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Gwen",
+      "role": "top",
       "count": 1
     },
     {
       "championId": 0,
       "championName": "MissFortune",
+      "role": "support",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Varus",
       "role": "support",
       "count": 1
     },
@@ -1324,19 +1360,13 @@
     },
     {
       "championId": 0,
-      "championName": "Cassiopeia",
-      "role": "top",
+      "championName": "Karthus",
+      "role": "support",
       "count": 1
     },
     {
       "championId": 0,
       "championName": "Chogath",
-      "role": "mid",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "DrMundo",
       "role": "mid",
       "count": 1
     },
@@ -1348,20 +1378,8 @@
     },
     {
       "championId": 0,
-      "championName": "Quinn",
-      "role": "mid",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Quinn",
-      "role": "top",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Gangplank",
-      "role": "top",
+      "championName": "Gragas",
+      "role": "jungle",
       "count": 1
     },
     {
@@ -1378,8 +1396,26 @@
     },
     {
       "championId": 0,
-      "championName": "Karthus",
-      "role": "support",
+      "championName": "Cassiopeia",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Anivia",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Corki",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "TwistedFate",
+      "role": "adc",
       "count": 1
     },
     {
@@ -1396,14 +1432,8 @@
     },
     {
       "championId": 0,
-      "championName": "Brand",
-      "role": "adc",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Velkoz",
-      "role": "adc",
+      "championName": "Kennen",
+      "role": "top",
       "count": 1
     },
     {
@@ -1426,26 +1456,8 @@
     },
     {
       "championId": 0,
-      "championName": "Blitzcrank",
-      "role": "support",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Kalista",
-      "role": "mid",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Ekko",
-      "role": "jungle",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Riven",
-      "role": "jungle",
+      "championName": "Twitch",
+      "role": "adc",
       "count": 1
     },
     {
@@ -1462,7 +1474,7 @@
     },
     {
       "championId": 0,
-      "championName": "Volibear",
+      "championName": "Elise",
       "role": "jungle",
       "count": 1
     },
@@ -1474,14 +1486,20 @@
     },
     {
       "championId": 0,
-      "championName": "Twitch",
-      "role": "support",
+      "championName": "Hecarim",
+      "role": "jungle",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Vayne",
+      "championName": "Kalista",
       "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Kalista",
+      "role": "mid",
       "count": 1
     },
     {
@@ -1492,14 +1510,32 @@
     },
     {
       "championId": 0,
-      "championName": "Twitch",
+      "championName": "Vayne",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Trundle",
+      "role": "support",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Yone",
       "role": "adc",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Alistar",
-      "role": "jungle",
+      "championName": "Tryndamere",
+      "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Naafiri",
+      "role": "top",
       "count": 1
     },
     {
@@ -1510,20 +1546,14 @@
     },
     {
       "championId": 0,
-      "championName": "Elise",
-      "role": "support",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Sejuani",
+      "championName": "Alistar",
       "role": "jungle",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Caitlyn",
-      "role": "support",
+      "championName": "Bard",
+      "role": "jungle",
       "count": 1
     },
     {
@@ -1558,38 +1588,26 @@
     },
     {
       "championId": 0,
-      "championName": "Tryndamere",
-      "role": "mid",
+      "championName": "Senna",
+      "role": "support",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Yone",
-      "role": "adc",
+      "championName": "Twitch",
+      "role": "support",
       "count": 1
     },
     {
       "championId": 0,
-      "championName": "Tryndamere",
-      "role": "top",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Naafiri",
-      "role": "top",
+      "championName": "Ekko",
+      "role": "jungle",
       "count": 1
     },
     {
       "championId": 0,
       "championName": "Ziggs",
       "role": "adc",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Corki",
-      "role": "mid",
       "count": 1
     },
     {
@@ -1606,20 +1624,50 @@
     },
     {
       "championId": 0,
-      "championName": "Vladimir",
-      "role": "mid",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Xerath",
-      "role": "mid",
-      "count": 1
-    },
-    {
-      "championId": 0,
-      "championName": "Zeri",
+      "championName": "Lucian",
       "role": "top",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Karma",
+      "role": "adc",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Viego",
+      "role": "mid",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Brand",
+      "role": "mid",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "KogMaw",
+      "role": "mid",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Morgana",
+      "role": "mid",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "Swain",
+      "role": "support",
+      "count": 1
+    },
+    {
+      "championId": 0,
+      "championName": "KogMaw",
+      "role": "support",
       "count": 1
     }
   ]
